@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><div id="contener">
+    <div id="logo"><img src="logo.png" alt="firma it"></div>
+    <div id="menu">
+        <nav><b>
+            <a href="index.html">Strona Główna</a>
+            <a href="uslugi.html">Usługi</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav></b>
+    </div>
+    <div id="baner"><img src="baner1.png" alt="Usługi informatyczne"></div>
+    <div id="glowny"><h2>Kontakt</h2>
+    <table>
+        <tr>
+            <td>Imię:</td>
+            <td><input type="text" id="imie"></td>
+        </tr>
+        <tr>
+            <td>Nazwisko:</td>
+            <td><input type="text" id="nazwisko"></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Zgłoszenie:</td>
+            <td><input type="text" id="zgloszenie"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" id="checkbox1">Zapoznałem/am się z regulaminem</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button>Resetuj</button><button onclick="przeslij()">Prześlij</button></td>
+        </tr>
+    </table><hr><script>
+        function przeslij(){
+            checked4=document.getElementById('checkbox1')
+            imie = document.getElementById('imie').value;
+            nazwisko = document.getElementById('nazwisko').value;
+            zgloszenie = document.getElementById('zgloszenie').value;
+            if(checked4.checked == true && imie!="" && nazwisko!=""){
+               
+                document.getElementById('odpowiedz').innerHTML = "Treść twojej sprawy:" + zgloszenie;
+            }else{
+                document.getElementById('odpowiedz').innerHTML = "Musisz zapoznać się z regulaminem!"
+            }
+        } 
+    </script><p id="odpowiedz"></p></div>
+    <div id="stopka"><p>Autor Strony: <b>Patryk Lipiński</b></p></div>
+</div>
+</body>
+</html>
